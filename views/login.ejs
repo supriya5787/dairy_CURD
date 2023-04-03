@@ -1,0 +1,126 @@
+
+
+<%-include('common/header.ejs')%>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <%-include('common/topbar.ejs')%>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <%-include('common/navber.ejs')%>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+
+    <div class="container">
+        <div class="card mt-5" style="background-color: rgb(50, 146, 248);">
+            <div class="card-header" style="color: aliceblue;">
+              <strong>Login</strong>
+            </div>
+            <% if (message.length > 0) { %>
+                <div class="alert alert-success">
+                    <strong><%= message %></strong>
+    
+                </div>
+                <% } %>
+                
+                <% if (message2.length > 0) { %>
+                  <div class="alert alert-danger">
+                      <strong><%= message2%></strong>
+                  </div>
+                  <% } %>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> 
+              <form action="/login_creat" method="post">
+                
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" name="email" value="<%= data1.email %>" >
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="password" value="<%= data1.password %>">
+                </div>
+                <input type="checkbox" name="rememberme"> Remember Me
+
+               <p></p>   
+               <button type="submit" class="btn btn-primary">Sign in</button>
+               Don't have an account yet?<a href="/register">Register</a>
+                           
+                
+            </form>
+          </li>   
+            </ul>
+          </div>
+    </div>
+
+    <!-- About End -->
+
+
+    <!-- Banner Start -->
+  
+    <!-- Banner End -->
+
+
+    <!-- Team Start -->
+ 
+    <!-- Team End -->
+
+
+    <!-- Footer Start -->
+    <%-include('common/footer.ejs')%>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-secondary text-body copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
